@@ -32,37 +32,6 @@ for any real secure purposes. You have been warned!
 
 */
 
-/*
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Key Schedule	Bytes	% Key	Key Bytes	Key Bits
-;
-; S-Box			1216	59.375	9.5			76
-; P-Box			320		15.625	2.5			20
-; XOR1			256		12.5	2			16
-; XOR2			256		12.5	2			16
-; Total			2048	100		16			128
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;; ANGELITA128 Algorithm ;;;;;;;;;;;;;;;;;;;
-; 1. Choose e/d (encryption/decryption)
-; 2. Choose the key option
-; 3. Input or generated key is expanded 128 times by
-;	the key schedule (KISS)
-; 4. The Key Schedule is split, some bytes used
-;	to initialize the S-Box and P-Box. The rest is
-;	used in the encryption/decryption loop
-; 5. The encryption/decryption loop works on 128-Bit
-;	blocks, for 16 cycles. Cycle below (Encryption):
-;
-;	b. XOR with KS 1
-;	c. S-Box
-;	d. XOR with KS 2
-;	e. If cycles is multiple of 2, P-Box the pairs of bits of the block
-;
-;	Decryption is simply the reverse of this
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-*/
 
 #include "ANGELITA128_Analysis.h"
 #include <iostream>
